@@ -1,0 +1,55 @@
+.message {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.imageAndText {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+}
+
+.imageAndText img {
+    position: sticky;
+    top: 100%; /* под элементом */
+    right: 1%;
+    transform: translateX(2%);
+    width: 40px;
+    height: 40px;
+}
+
+.text {
+    padding: 8px 13px;
+    background-color: #0066CC;
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+.text:after {
+
+}
+
+.name {
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.messageText {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.time {
+    font-size: 10px;
+    font-weight: 600;
+    position: absolute;
+    top: 105%; /* под элементом */
+    right: 2%;
+    transform: translateX(5%);
+}
