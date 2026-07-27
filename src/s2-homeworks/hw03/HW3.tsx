@@ -14,18 +14,18 @@ import GreetingContainer from './GreetingContainer'
 * 8 - в файле GreetingContainer.tsx вычислить количество добавленных и имя последнего (totalUsers, lastUserName) +
 * 9 - в файле Greeting.tsx дописать типизацию пропсов +
 * 10 - в файле Greeting.tsx вычислить inputClass в зависимости от наличия ошибки +
-* 11 - сделать стили в соответствии с дизайном
+* 11 - сделать стили в соответствии с дизайном +
 * */
 
 // types
 export type UserType = {
-    _id: number // need to fix any
+    _id: string // need to fix any
     name: string // need to fix any
 }
 
 export const pureAddUserCallback = (name: string, setUsers: Dispatch<SetStateAction<UserType[]>>, users: UserType[]) => { // need to fix any
     const user = { // need to fix
-        _id: users.length + 1,
+        _id: v1(),
         name: name,
     }
     setUsers([...users, user])
