@@ -1,7 +1,6 @@
 import React, {ChangeEvent, Dispatch, KeyboardEvent, SetStateAction, useState} from 'react'
 import Greeting from './Greeting'
 import {UserType} from './HW3'
-import {Simulate} from "react-dom/test-utils";
 
 type GreetingContainerPropsType = {
     users: UserType[] // need to fix any
@@ -15,9 +14,12 @@ export const pureAddUser = (
     addUserCallback: GreetingContainerPropsType["addUserCallback"]
 ) => {
     // если имя пустое - показать ошибку, иначе - добавить юзера и очистить инпут
-    name.trim() === ''
-        ? setError('Ошибка! Введите имя!')
-        : addUserCallback(name.trim()); setName('');
+    if (name.trim() === '') {
+        setError('Ошибка! Введите имя!')
+        return
+    }
+    addUserCallback(name)
+    setName('')
 }
 
 export const pureOnBlur = (name: string, setError: Dispatch<SetStateAction<string>>) => { // если имя пустое - показать ошибку
