@@ -1,5 +1,9 @@
 .buttonsContainer {
+    :first-child {
+        margin-right: 24px;
+    }
 }
 
 .editableSpanContainer {
+    margin-bottom: 22px;
 }
