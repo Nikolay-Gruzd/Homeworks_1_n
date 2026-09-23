@@ -1,15 +1,43 @@
 .radio {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000000;
+    border-radius: 50%;        /* делаем круг */
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    transition: border-color 0.2s;
 }
 
 .radio::before {
+    content: '';
+    position: absolute;
+    inset: 3px;                /* отступ от края */
+    border-radius: 50%;
+    background: #000000;
+    transform: scale(0);       /* спрятана */
+    transition: transform 0.15s ease-in-out;
 }
 
 
 .radio:checked::before {
+    transform: scale(1);
 }
 
 .label {
+    display: flex;
+    align-items: center;   /* выравнивает по вертикали */
+    gap: 11px;              /* отступ между кружком и текстом */
+    cursor: pointer;
+    margin-bottom: 20px;
 }
 
 .options {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0;
+    text-align: left;
 }
